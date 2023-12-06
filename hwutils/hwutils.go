@@ -1,4 +1,4 @@
-package htutils
+package hwutils
 
 import (
 	"github.com/gogf/gf/v2/frame/g"

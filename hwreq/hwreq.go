@@ -1,6 +1,17 @@
 package hwreq
 
 /**
+ * 当前登录用户信息
+ */
+type CurUser struct {
+	Id      uint   // 用户ID
+	Phone   string // 手机号
+	Role    uint   // 0-门店，1-商户，2-运营端
+	ShopId  uint   // 商铺id
+	StoreId uint   // 门店id
+}
+
+/**
  * 查询单条或删除信息时的通用请求参数
  */
 type IDReq struct {
