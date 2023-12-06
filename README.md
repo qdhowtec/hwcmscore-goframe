@@ -1,5 +1,6 @@
 # hwcmscore-goframe
 
+根据公司业务做了些针对性的处理
 自己开发goframe应用使用的逻辑层基类文件
 
 logic层继承hwlogic.baseLogic后，自带增删改功能
