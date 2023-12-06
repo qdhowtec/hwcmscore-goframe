@@ -1,4 +1,4 @@
-module hwcmscore-goframe
+module github.com/qdhowtec/hwcmscore-goframe
 
 go 1.20
 
