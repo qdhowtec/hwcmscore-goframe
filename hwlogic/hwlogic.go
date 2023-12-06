@@ -16,8 +16,8 @@ import (
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/os/gtime"
 	"github.com/gogf/gf/v2/util/gconv"
-	"hwcmscore-goframe/hwreq"
-	"hwcmscore-goframe/hwresp"
+	"github.com/qdhowtec/hwcmscore-goframe/hwreq"
+	"github.com/qdhowtec/hwcmscore-goframe/hwresp"
 	"math"
 	"reflect"
 )
