@@ -10,7 +10,7 @@ import (
 	"reflect"
 )
 
-type BaseStoreController struct {
+type BaseController struct {
 	CurUser   hwreq.CurUser
 	ReqFind   interface{}
 	RespFind  interface{}
@@ -23,7 +23,7 @@ type BaseStoreController struct {
 	Service   interface{}
 }
 
-func (c *BaseStoreController) Add(r *ghttp.Request) {
+func (c *BaseController) Add(r *ghttp.Request) {
 	c.setCurUser(r)
 	defer func() {
 		if err := recover(); err != nil {
@@ -67,7 +67,7 @@ func (c *BaseStoreController) Add(r *ghttp.Request) {
 	r.Response.WriteJson(hwutils.Success(resp))
 }
 
-func (c *BaseStoreController) Modify(r *ghttp.Request) {
+func (c *BaseController) Modify(r *ghttp.Request) {
 	c.setCurUser(r)
 	defer func() {
 		if err := recover(); err != nil {
@@ -102,7 +102,7 @@ func (c *BaseStoreController) Modify(r *ghttp.Request) {
 	r.Response.WriteJson(hwutils.Success(g.Map{}))
 }
 
-func (c *BaseStoreController) Delete(r *ghttp.Request) {
+func (c *BaseController) Delete(r *ghttp.Request) {
 	c.setCurUser(r)
 	defer func() {
 		if err := recover(); err != nil {
@@ -137,7 +137,7 @@ func (c *BaseStoreController) Delete(r *ghttp.Request) {
 	r.Response.WriteJson(hwutils.Success(g.Map{}))
 }
 
-func (c *BaseStoreController) Find(r *ghttp.Request) {
+func (c *BaseController) Find(r *ghttp.Request) {
 	c.setCurUser(r)
 	defer func() {
 		if err := recover(); err != nil {
@@ -177,7 +177,7 @@ func (c *BaseStoreController) Find(r *ghttp.Request) {
 	r.Response.WriteJson(hwutils.Success(resp))
 }
 
-func (c *BaseStoreController) Lst(r *ghttp.Request) {
+func (c *BaseController) Lst(r *ghttp.Request) {
 	c.setCurUser(r)
 	defer func() {
 		if err := recover(); err != nil {
@@ -214,7 +214,7 @@ func (c *BaseStoreController) Lst(r *ghttp.Request) {
 	r.Response.WriteJson(hwutils.Success(resp))
 }
 
-func (c *BaseStoreController) setCurUser(r *ghttp.Request) {
+func (c *BaseController) setCurUser(r *ghttp.Request) {
 	defer func() {
 		if err := recover(); err != nil {
 			r.Response.WriteJson(hwutils.Fail(err))
